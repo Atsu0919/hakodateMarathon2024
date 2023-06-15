@@ -17,6 +17,7 @@
     <button id="btnCurLocation" onClick="setCurLocation()">現在地を表示</button>
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
     <script src="plugin/L.Icon.Pulse.js"></script>
+    <script src="json.js"></script>
     <script>
       var map = L.map('mapid').setView([41.768671,140.728962], 15);
       var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -24,8 +25,16 @@
       });
       osm.addTo(map);
       var pulsingIcon = L.icon.pulse({iconSize:[12,12],color:'#1199fb'});
-      var FA1 = L.marker([41.768671,140.728962]);
-      var firstAidStation = L.layerGroup([FA1]);
+      
+      function onEachFeature(feature, layer) {
+      if (feature.properties && feature.properties.name) {
+        layer.bindPopup(feature.properties.name);
+      }
+}
+      var FAS=L.geoJSON(firstAid, {
+        onEachFeature: onEachFeature
+      });
+      var firstAidStation = L.layerGroup([FAS]);
       var overlayLayerControls = {
         '救護所':firstAidStation,
       };
