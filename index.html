@@ -57,7 +57,7 @@
         function success(e) {
           var lat  = e.coords.latitude;
           var lng = e.coords.longitude;
-          map.setView([lat, lng], 15);
+          map.setView([lat, lng], );
           curentPosition = L.marker([lat,lng],{icon: pulsingIcon}).addTo(map).bindPopup('現在地').openPopup();
         };
  

@@ -42,8 +42,8 @@ var firstAid ={
         "geometry": {
           "type": "Point",
           "coordinates": [
-            140.73967,
-            41.769959
+            140.739965,
+            41.769923
           ]
         }
       },
@@ -65,8 +65,8 @@ var firstAid ={
         "geometry": {
           "type": "Point",
           "coordinates": [
-            140.720412,
-            41.760669
+            140.720739,
+            41.761193
           ]
         }
       },
@@ -88,8 +88,8 @@ var firstAid ={
         "geometry": {
           "type": "Point",
           "coordinates": [
-            140.726902,
-            41.786673
+            140.726935,
+            41.786493
           ]
         }
       },
@@ -111,8 +111,8 @@ var firstAid ={
         "geometry": {
           "type": "Point",
           "coordinates": [
-            140.709715,
-            41.769119
+            140.710922,
+            41.769063
           ]
         }
       },
@@ -134,8 +134,8 @@ var firstAid ={
         "geometry": {
           "type": "Point",
           "coordinates": [
-            140.739048,
-            41.783073
+            140.738495,
+            41.782465
           ]
         }
       }
