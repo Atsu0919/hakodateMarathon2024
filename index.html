@@ -7,21 +7,35 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
      crossorigin=""/>
-
+    <link rel="stylesheet" href="plugin/L.Icon.Pulse.css" >
+     
     
-    <title>Document</title>
+    <title>函館マラソンマップ</title>
 </head>
 <body>
     <div id="mapid" style="width: 100%; height: 500px"></div>
     <button id="btnCurLocation" onClick="setCurLocation()">現在地を表示</button>
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="plugin/L.Icon.Pulse.js"></script>
     <script>
       var map = L.map('mapid').setView([41.768671,140.728962], 15);
       var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
       });
       osm.addTo(map);
+      var pulsingIcon = L.icon.pulse({iconSize:[12,12],color:'#1199fb'});
+      var FA1 = L.marker([41.768671,140.728962]);
+      var firstAidStation = L.layerGroup([FA1]);
+      var overlayLayerControls = {
+        '救護所':firstAidStation,
+      };
+      L.control.layers(null, overlayLayerControls, {
+        collapsed: false,
+      }).addTo(map);
+
       function setCurLocation(){
+
+
         if (navigator.geolocation == false){
           alert('現在地を取得できませんでした。');
           return;
@@ -31,7 +45,7 @@
           var lat  = e.coords.latitude;
           var lng = e.coords.longitude;
           map.setView([lat, lng], 15);
-          L.marker([lat,lng]).addTo(map).bindPopup('現在地').openPopup();
+          L.marker([lat,lng],{icon: pulsingIcon}).addTo(map).bindPopup('現在地').openPopup();
         };
  
         function error() {
