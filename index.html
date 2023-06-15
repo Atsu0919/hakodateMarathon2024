@@ -33,8 +33,12 @@
         collapsed: false,
       }).addTo(map);
 
+      var curentPosition;
       function setCurLocation(){
-
+        
+      if (curentPosition) {
+        map.removeLayer(curentPosition);
+      }
 
         if (navigator.geolocation == false){
           alert('現在地を取得できませんでした。');
@@ -45,7 +49,7 @@
           var lat  = e.coords.latitude;
           var lng = e.coords.longitude;
           map.setView([lat, lng], 15);
-          L.marker([lat,lng],{icon: pulsingIcon}).addTo(map).bindPopup('現在地').openPopup();
+          curentPosition = L.marker([lat,lng],{icon: pulsingIcon}).addTo(map).bindPopup('現在地').openPopup();
         };
  
         function error() {
