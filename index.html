@@ -18,8 +18,9 @@
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
     <script src="plugin/L.Icon.Pulse.js"></script>
     <script src="json.js"></script>
+    <script src="courseJson.js"></script>
     <script>
-      var map = L.map('mapid').setView([41.768671,140.728962], 15);
+      var map = L.map('mapid').setView([41.785965,140.745646], 15);
       var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
       });
@@ -30,13 +31,27 @@
       if (feature.properties && feature.properties.name) {
         layer.bindPopup(feature.properties.name);
       }
-}
+      }
+      function onEachColor(feature) {
+      return{
+        color:feature.properties._color,
+        weight:feature.properties._weight,
+        opacity:feature.properties._opacity,
+      }
+      }
       var FAS=L.geoJSON(firstAid, {
         onEachFeature: onEachFeature
       });
+      var course1=L.geoJSON(course, {
+        style:onEachColor,
+        onEachFeature: onEachFeature
+      });
       var firstAidStation = L.layerGroup([FAS]);
+      var MBTcourse = L.layerGroup([course1]);
+
       var overlayLayerControls = {
         '救護所':firstAidStation,
+        'コース':MBTcourse,
       };
       L.control.layers(null, overlayLayerControls, {
         collapsed: false,
