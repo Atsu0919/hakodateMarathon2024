@@ -41,13 +41,21 @@
         iconSize: [31, 42]                 // Width and height of the icon
       });
       var timer_OffIcon = L.IconMaterial.icon({
-        icon: 'timer_Off',            // Name of Material icon
+        icon: 'timer_off',            // Name of Material icon
         iconColor: 'black',              // Material icon color (could be rgba, hex, html name...)
         markerColor: 'rgba(255,255,255,1)',  // Marker fill color
         outlineColor: 'black',            // Marker outline color
         outlineWidth: 1,                   // Marker outline width 
         iconSize: [31, 42]                 // Width and height of the icon
-      });      
+      });
+      var waterIcon = L.IconMaterial.icon({
+        icon: 'water_drop',            // Name of Material icon
+        iconColor: 'blue',              // Material icon color (could be rgba, hex, html name...)
+        markerColor: 'rgba(255,255,255,1)',  // Marker fill color
+        outlineColor: 'blue',            // Marker outline color
+        outlineWidth: 1,                   // Marker outline width 
+        iconSize: [31, 42]                 // Width and height of the icon
+      });
       function onEachFeature(feature, layer) {
         var comment = "";
       if (feature.properties && feature.properties.name) {
@@ -71,7 +79,7 @@
         },
         onEachFeature: onEachFeature
       });
-      var course1=L.geoJSON(course, {
+      var course_marker=L.geoJSON(course, {
         style:onEachColor,
         onEachFeature: onEachFeature
       });
@@ -81,14 +89,22 @@
         },
         onEachFeature: onEachFeature
       });
+      var aid_marker=L.geoJSON(aid, {
+        pointToLayer:function(feature,cordinate){
+          return L.marker(cordinate,{icon:waterIcon})
+        },
+        onEachFeature: onEachFeature
+      });
       var firstAidStation = L.layerGroup([FAS]);
-      var MBTcourse = L.layerGroup([course1]);
+      var MBTcourse = L.layerGroup([course_marker]);
       var limitGate = L.layerGroup([gate_marker]);
+      var aidStation = L.layerGroup([aid_marker]);
 
       var overlayLayerControls = {
         '救護所':firstAidStation,
         'コース':MBTcourse,
         '関門':limitGate,
+        'エイド':aidStation,
       };
       L.control.layers(null, overlayLayerControls, {
         collapsed: false,
@@ -111,7 +127,7 @@
           var lat  = e.coords.latitude;
           var lng = e.coords.longitude;
           map.setView([lat, lng], );
-          curentPosition = L.marker([lat,lng],{icon: pulsingIcon}).addTo(map).bindPopup('現在地').openPopup();
+          curentPosition = L.marker([lat,lng],{icon: pulsingIcon}).addTo(map);
         };
  
         function error() {
