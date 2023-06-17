@@ -20,7 +20,7 @@
     <script src="json.js"></script>
     <script src="courseJson.js"></script>
     <script>
-      var map = L.map('mapid',{minZoom: 14,maxZoom: 18})
+      var map = L.map('mapid',{minZoom: 13,maxZoom: 18})
       map.setView([41.785965,140.745646], 15);
       var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
@@ -29,9 +29,14 @@
       var pulsingIcon = L.icon.pulse({iconSize:[12,12],color:'#1199fb'});
       
       function onEachFeature(feature, layer) {
+        var comment = "";
       if (feature.properties && feature.properties.name) {
-        layer.bindPopup(feature.properties.name);
+        var name=feature.properties.name;
       }
+      if (feature.properties && feature.properties.comment){
+        comment = feature.properties.comment;
+      }
+      layer.bindPopup(name+'<br/>'+comment);
       }
       function onEachColor(feature) {
       return{
@@ -39,7 +44,7 @@
         weight:feature.properties._weight,
         opacity:feature.properties._opacity,
       }
-      }
+      };
       var FAS=L.geoJSON(firstAid, {
         onEachFeature: onEachFeature
       });
@@ -47,12 +52,18 @@
         style:onEachColor,
         onEachFeature: onEachFeature
       });
+      var gate_marker=L.geoJSON(gate, {
+        style:onEachColor,
+        onEachFeature: onEachFeature
+      });
       var firstAidStation = L.layerGroup([FAS]);
       var MBTcourse = L.layerGroup([course1]);
+      var limitGate = L.layerGroup([gate_marker]);
 
       var overlayLayerControls = {
         '救護所':firstAidStation,
         'コース':MBTcourse,
+        '関門':limitGate,
       };
       L.control.layers(null, overlayLayerControls, {
         collapsed: false,
@@ -61,9 +72,9 @@
       var curentPosition;
       function setCurLocation(){
         
-      if (curentPosition) {
-        map.removeLayer(curentPosition);
-      }
+        if (curentPosition) {
+          map.removeLayer(curentPosition);
+        }
 
         if (navigator.geolocation == false){
           alert('現在地を取得できませんでした。');
