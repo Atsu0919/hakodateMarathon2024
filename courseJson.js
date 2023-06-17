@@ -5,6 +5,7 @@ var course =
       {
         "type": "Feature",
         "properties": {
+            "name":"1-前半",
           "_color": "#000000",
           "_opacity": 0.5,
           "_weight": 10
@@ -50,6 +51,7 @@ var course =
       {
         "type": "Feature",
         "properties": {
+            "name":"1-後半",
           "_color": "#666666",
           "_opacity": 0.5,
           "_weight": 10
