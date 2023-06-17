@@ -6,7 +6,6 @@ var firstAid ={
         "properties": {
           "name": "第１救護所",
           "_markerType": "Icon",
-          "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
           "_iconSize": [
             20,
             20
@@ -29,7 +28,6 @@ var firstAid ={
         "properties": {
           "name": "第２救護所",
           "_markerType": "Icon",
-          "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
           "_iconSize": [
             20,
             20
@@ -52,7 +50,6 @@ var firstAid ={
         "properties": {
           "name": "第３救護所",
           "_markerType": "Icon",
-          "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
           "_iconSize": [
             20,
             20
@@ -75,7 +72,6 @@ var firstAid ={
         "properties": {
           "name": "第４救護所",
           "_markerType": "Icon",
-          "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
           "_iconSize": [
             20,
             20
@@ -98,7 +94,6 @@ var firstAid ={
         "properties": {
           "name": "第５救護所",
           "_markerType": "Icon",
-          "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
           "_iconSize": [
             20,
             20
@@ -121,7 +116,6 @@ var firstAid ={
         "properties": {
           "name": "第６救護所",
           "_markerType": "Icon",
-          "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
           "_iconSize": [
             20,
             20
@@ -141,7 +135,6 @@ var firstAid ={
       }
     ]
   };
-
   var gate =
   {
     "type": "FeatureCollection",
@@ -152,7 +145,6 @@ var firstAid ={
           "name": "第２関門",
           "comment":"閉鎖時刻10:39",
           "_markerType": "Icon",
-          "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
           "_iconSize": [
             20,
             20
@@ -176,7 +168,6 @@ var firstAid ={
           "name": "第３関門",
           "comment":"閉鎖時刻11:20",
           "_markerType": "Icon",
-          "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
           "_iconSize": [
             20,
             20
@@ -200,7 +191,6 @@ var firstAid ={
           "name": "第４関門",
           "comment":"閉鎖時刻12:00",
           "_markerType": "Icon",
-          "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
           "_iconSize": [
             20,
             20
@@ -224,7 +214,6 @@ var firstAid ={
           "name": "第５関門",
           "comment":"閉鎖時刻12:38",
           "_markerType": "Icon",
-          "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
           "_iconSize": [
             20,
             20
@@ -248,7 +237,6 @@ var firstAid ={
           "name": "第６関門",
           "comment":"閉鎖時刻13:16",
           "_markerType": "Icon",
-          "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
           "_iconSize": [
             20,
             20
@@ -272,7 +260,6 @@ var firstAid ={
           "name": "第７関門",
           "comment":"閉鎖時刻13:48",
           "_markerType": "Icon",
-          "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
           "_iconSize": [
             20,
             20
@@ -296,7 +283,6 @@ var firstAid ={
           "name": "第８関門",
           "comment":"閉鎖時刻14:18",
           "_markerType": "Icon",
-          "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
           "_iconSize": [
             20,
             20
@@ -309,8 +295,8 @@ var firstAid ={
         "geometry": {
           "type": "Point",
           "coordinates": [
-            140.719725,
-            41.769031
+            140.719178,
+            41.768663
           ]
         }
       },
@@ -320,7 +306,6 @@ var firstAid ={
           "name": "第９関門",
           "comment":"閉鎖時刻14:41",
           "_markerType": "Icon",
-          "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
           "_iconSize": [
             20,
             20
@@ -344,7 +329,6 @@ var firstAid ={
           "name": "第１関門",
           "comment":"閉鎖時刻10:14",
           "_markerType": "Icon",
-          "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
           "_iconSize": [
             20,
             20
@@ -373,7 +357,6 @@ var aid =
       "properties": {
         "name": "第１エイド",
         "_markerType": "Icon",
-        "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
         "_iconSize": [
           20,
           20
@@ -396,7 +379,6 @@ var aid =
       "properties": {
         "name": "第２エイド",
         "_markerType": "Icon",
-        "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
         "_iconSize": [
           20,
           20
@@ -419,7 +401,6 @@ var aid =
       "properties": {
         "name": "第３エイド",
         "_markerType": "Icon",
-        "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
         "_iconSize": [
           20,
           20
@@ -442,7 +423,6 @@ var aid =
       "properties": {
         "name": "第４エイド",
         "_markerType": "Icon",
-        "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
         "_iconSize": [
           20,
           20
@@ -465,7 +445,6 @@ var aid =
       "properties": {
         "name": "第５エイド",
         "_markerType": "Icon",
-        "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
         "_iconSize": [
           20,
           20
@@ -488,7 +467,6 @@ var aid =
       "properties": {
         "name": "第６エイド",
         "_markerType": "Icon",
-        "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
         "_iconSize": [
           20,
           20
@@ -511,7 +489,6 @@ var aid =
       "properties": {
         "name": "第７エイド",
         "_markerType": "Icon",
-        "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
         "_iconSize": [
           20,
           20
@@ -534,7 +511,6 @@ var aid =
       "properties": {
         "name": "第８エイド",
         "_markerType": "Icon",
-        "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
         "_iconSize": [
           20,
           20
@@ -557,7 +533,6 @@ var aid =
       "properties": {
         "name": "第９エイド",
         "_markerType": "Icon",
-        "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
         "_iconSize": [
           20,
           20
@@ -580,7 +555,6 @@ var aid =
       "properties": {
         "name": "第１０エイド",
         "_markerType": "Icon",
-        "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
         "_iconSize": [
           20,
           20
@@ -603,7 +577,6 @@ var aid =
       "properties": {
         "name": "第１１エイド",
         "_markerType": "Icon",
-        "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
         "_iconSize": [
           20,
           20
@@ -626,7 +599,6 @@ var aid =
       "properties": {
         "name": "第１２エイド",
         "_markerType": "Icon",
-        "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
         "_iconSize": [
           20,
           20
@@ -649,7 +621,6 @@ var aid =
       "properties": {
         "name": "第１３エイド",
         "_markerType": "Icon",
-        "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
         "_iconSize": [
           20,
           20
@@ -672,7 +643,6 @@ var aid =
       "properties": {
         "name": "第１４エイド",
         "_markerType": "Icon",
-        "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
         "_iconSize": [
           20,
           20
@@ -695,7 +665,6 @@ var aid =
       "properties": {
         "name": "アミノバイタル",
         "_markerType": "Icon",
-        "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/080.png",
         "_iconSize": [
           20,
           20
