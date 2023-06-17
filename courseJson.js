@@ -5,9 +5,9 @@ var course =
       {
         "type": "Feature",
         "properties": {
-            "name":"1-前半",
+            "name":"区間1-前半",
           "_color": "#000000",
-          "_opacity": 0.5,
+          "_opacity": 0.7,
           "_weight": 10
         },
         "geometry": {
@@ -51,9 +51,9 @@ var course =
       {
         "type": "Feature",
         "properties": {
-            "name":"1-後半",
+            "name":"区間1-後半",
           "_color": "#666666",
-          "_opacity": 0.5,
+          "_opacity": 0.7,
           "_weight": 10
         },
         "geometry": {
@@ -105,9 +105,9 @@ var course =
       {
         "type": "Feature",
         "properties": {
-          "name": "2",
+          "name":"区間2",
           "_color": "#00ff00",
-          "_opacity": 0.5,
+          "_opacity": 0.7,
           "_weight": 10
         },
         "geometry": {
@@ -147,9 +147,9 @@ var course =
       {
         "type": "Feature",
         "properties": {
-          "name": "3",
+          "name":"区間3",
           "_color": "#20124d",
-          "_opacity": 0.5,
+          "_opacity": 0.7,
           "_weight": 10
         },
         "geometry": {
@@ -217,9 +217,9 @@ var course =
       {
         "type": "Feature",
         "properties": {
-          "name": "4",
+          "name":"区間4",
           "_color": "#38761d",
-          "_opacity": 0.5,
+          "_opacity": 0.7,
           "_weight": 10
         },
         "geometry": {
@@ -287,9 +287,9 @@ var course =
       {
         "type": "Feature",
         "properties": {
-          "name": "4",
+          "name":"区間4",
           "_color": "#274e13",
-          "_opacity": 0.5,
+          "_opacity": 0.7,
           "_weight": 10
         },
         "geometry": {
@@ -321,9 +321,9 @@ var course =
       {
         "type": "Feature",
         "properties": {
-          "name": "5",
+          "name":"区間5",
           "_color": "#7f6000",
-          "_opacity": 0.5,
+          "_opacity": 0.7,
           "_weight": 10
         },
         "geometry": {
@@ -367,9 +367,9 @@ var course =
       {
         "type": "Feature",
         "properties": {
-          "name": "6",
-          "_color": "#f1c232",
-          "_opacity": 0.5,
+          "name":"区間6",
+          "_color": "#f08316",
+          "_opacity": 0.7,
           "_weight": 10
         },
         "geometry": {
@@ -401,9 +401,9 @@ var course =
       {
         "type": "Feature",
         "properties": {
-          "name": "7",
+          "name":"区間7",
           "_color": "#cc0000",
-          "_opacity": 0.5,
+          "_opacity": 0.7,
           "_weight": 10
         },
         "geometry": {
@@ -451,9 +451,9 @@ var course =
       {
         "type": "Feature",
         "properties": {
-            "name": "8",
+            "name":"区間8",
           "_color": "#674ea7",
-          "_opacity": 0.5,
+          "_opacity": 0.7,
           "_weight": 10
         },
         "geometry": {
@@ -485,9 +485,9 @@ var course =
       {
         "type": "Feature",
         "properties": {
-          "name": "9",
+          "name":"区間9",
           "_color": "#ffff00",
-          "_opacity": 0.5,
+          "_opacity": 0.7,
           "_weight": 10
         },
         "geometry": {
@@ -539,9 +539,9 @@ var course =
       {
         "type": "Feature",
         "properties": {
-          "name": "11",
+          "name":"区間11",
           "_color": "#e69138",
-          "_opacity": 0.5,
+          "_opacity": 0.7,
           "_weight": 10
         },
         "geometry": {
@@ -633,9 +633,9 @@ var course =
       {
         "type": "Feature",
         "properties": {
-          "name": "10",
+          "name":"区間10",
           "_color": "#0000ff",
-          "_opacity": 0.5,
+          "_opacity": 0.7,
           "_weight": 10
         },
         "geometry": {
@@ -695,9 +695,9 @@ var course =
       {
         "type": "Feature",
         "properties": {
-          "name": "12",
+          "name":"区間12",
           "_color": "#ff0000",
-          "_opacity": 0.5,
+          "_opacity": 0.7,
           "_weight": 10
         },
         "geometry": {
