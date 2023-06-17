@@ -8,15 +8,19 @@
      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
      crossorigin=""/>
     <link rel="stylesheet" href="plugin/L.Icon.Pulse.css" >
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="plugin/leaflet.icon-material.css" rel="stylesheet">
+
      
     
     <title>函館マラソンマップ</title>
 </head>
 <body>
-    <div id="mapid" style="width: 100%; height: 500px"></div>
+    <div id="mapid" style="width: 100%; height: 85vh"></div>
     <button id="btnCurLocation" onClick="setCurLocation()">現在地を表示</button>
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
     <script src="plugin/L.Icon.Pulse.js"></script>
+    <script src="plugin/leaflet.icon-material.js"></script>
     <script src="json.js"></script>
     <script src="courseJson.js"></script>
     <script>
@@ -27,7 +31,23 @@
       });
       osm.addTo(map);
       var pulsingIcon = L.icon.pulse({iconSize:[12,12],color:'#1199fb'});
-      
+
+      var medicalIcon = L.IconMaterial.icon({
+        icon: 'medical_services',            // Name of Material icon
+        iconColor: 'red',              // Material icon color (could be rgba, hex, html name...)
+        markerColor: 'rgba(255,255,255,1)',  // Marker fill color
+        outlineColor: 'red',            // Marker outline color
+        outlineWidth: 1,                   // Marker outline width 
+        iconSize: [31, 42]                 // Width and height of the icon
+      });
+      var timer_OffIcon = L.IconMaterial.icon({
+        icon: 'timer_Off',            // Name of Material icon
+        iconColor: 'black',              // Material icon color (could be rgba, hex, html name...)
+        markerColor: 'rgba(255,255,255,1)',  // Marker fill color
+        outlineColor: 'black',            // Marker outline color
+        outlineWidth: 1,                   // Marker outline width 
+        iconSize: [31, 42]                 // Width and height of the icon
+      });      
       function onEachFeature(feature, layer) {
         var comment = "";
       if (feature.properties && feature.properties.name) {
@@ -46,6 +66,9 @@
       }
       };
       var FAS=L.geoJSON(firstAid, {
+        pointToLayer:function(feature,cordinate){
+          return L.marker(cordinate,{icon:medicalIcon})
+        },
         onEachFeature: onEachFeature
       });
       var course1=L.geoJSON(course, {
@@ -53,7 +76,9 @@
         onEachFeature: onEachFeature
       });
       var gate_marker=L.geoJSON(gate, {
-        style:onEachColor,
+        pointToLayer:function(feature,cordinate){
+          return L.marker(cordinate,{icon:timer_OffIcon})
+        },
         onEachFeature: onEachFeature
       });
       var firstAidStation = L.layerGroup([FAS]);
@@ -68,6 +93,7 @@
       L.control.layers(null, overlayLayerControls, {
         collapsed: false,
       }).addTo(map);
+      MBTcourse.addTo(map);
 
       var curentPosition;
       function setCurLocation(){
@@ -94,6 +120,9 @@
  
         navigator.geolocation.getCurrentPosition(success, error);
       }
+
+  
+
       </script>
   </body>
 </html>
