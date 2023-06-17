@@ -20,7 +20,8 @@
     <script src="json.js"></script>
     <script src="courseJson.js"></script>
     <script>
-      var map = L.map('mapid').setView([41.785965,140.745646], 15);
+      var map = L.map('mapid',{minZoom: 14,maxZoom: 18})
+      map.setView([41.785965,140.745646], 15);
       var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: "© <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
       });
