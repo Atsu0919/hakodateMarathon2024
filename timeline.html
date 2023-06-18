@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css"
+    />
+    <script src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <script src="timeline.js"></script>
+    <title>Timeline</title>
+    <style>
+      .area1{
+        background-color: gray;
+        height:4vh;
+      }
+      .area2{
+        background-color: lightgreen;
+        height:4vh;
+      }
+      .area3{
+        background-color: blue;
+        height:4vh;
+      }
+      .area4{
+        background-color: green;
+        height:4vh;
+      }
+      .area5{
+        background-color: brown;
+        height:4vh;
+      }
+      .area6{
+        background-color:orange;
+        height:4vh;
+      }
+      .area7{
+        background-color:pink;
+        height:4vh;
+      }
+      .area8{
+        background-color:violet;
+        height:4vh;
+      }
+      .area9{
+        background-color:yellow;
+        height:4vh;
+      }
+      .area10{
+        background-color:skyblue;
+        height:4vh;
+      }
+      .area11{
+        background-color:burlywood;
+        height:4vh;
+      }
+      .area12{
+        background-color: crimson;
+        height:4vh;
+      }
+      .area345{
+        background-color: whitesmoke;
+        height:4vh;
+      }
+      .area67{
+        background-color:papayawhip;
+        height:4vh;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html">地図に戻る</a>
+    <div id="visualization"></div>
+    <script>
+      
+      for (let i = 0; i < items.length; i++) {
+        const o = items[i];
+        o.id = i + 1; // itemにidを付ける（推奨）
+        o.title = o.start; // itemのtooltipで表示されるタイトル
+        if (o.end) {
+          o.title = `${o.start} - ${o.end}`;
+        }
+      }
+      const options = {
+        start: new Date(2023,5,25,9,0,0), // timeline軸が表す期間の範囲の開始日
+        end: new Date(2023,5,25,15,0,0), // （同）範囲の終了日
+        zoomable: true, // timeline chartのzoomを無効にする
+        orientation: "top", // timeline軸(見出し行）を上側に表示する
+        tooltip: {
+          delay: 50, // tooltipが表示されるまでのdelay(ms)
+        },
+        stack:false,
+        format:"HH:mm",
+        //maxHeight:"500px",
+      };
+
+      const groups = [
+        { id: "1", content: "MBT1" },
+        { id: "2", content: "MBT2" },
+        { id: "3", content: "MBT3" },
+        { id: "4", content: "MBT4" },
+        { id: "5", content: "MBT5" },
+        { id: "6", content: "MBT6" },
+        { id: "7", content: "MBT7" },
+        { id: "8", content: "MBT8" },
+        { id: "9", content: "MBT9" },
+        { id: "10", content: "MBT10" },
+        { id: "11", content: "MBT11" },
+        { id: "12", content: "MBT12" },
+        { id: "13", content: "MBT13" },
+        { id: "14", content: "MBT14" },
+        { id: "15", content: "MBT15" },
+        { id: "16", content: "MBT16" },
+        { id: "17", content: "MBT17" },
+      ];
+      const container = document.getElementById("visualization");
+      const timeline = new vis.Timeline(container, items, groups, options);
+    </script>
+  </body>
+</html>
