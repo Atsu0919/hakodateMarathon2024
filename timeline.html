@@ -40,7 +40,7 @@
         height:4vh;
       }
       .area8{
-        background-color:violet;
+        background-color:purple;
         height:4vh;
       }
       .area9{
@@ -77,21 +77,24 @@
       for (let i = 0; i < items.length; i++) {
         const o = items[i];
         o.id = i + 1; // itemにidを付ける（推奨）
-        o.title = o.start; // itemのtooltipで表示されるタイトル
+        var startHour = o.start.getHours().toString().padStart(2, "0");
+        var startMinutes = o.start.getMinutes().toString().padStart(2, "0");
+        var endHour = o.end.getHours().toString().padStart(2, "0");
+        var endMinutes = o.end.getMinutes().toString().padStart(2, "0");
         if (o.end) {
-          o.title = `${o.start} - ${o.end}`;
+          o.title = `${startHour}:${startMinutes} ～ ${endHour}:${endMinutes}`;
         }
       }
       const options = {
         start: new Date(2023,5,25,9,0,0), // timeline軸が表す期間の範囲の開始日
         end: new Date(2023,5,25,15,0,0), // （同）範囲の終了日
-        zoomable: true, // timeline chartのzoomを無効にする
+        zoomable: true, 
         orientation: "top", // timeline軸(見出し行）を上側に表示する
         tooltip: {
           delay: 50, // tooltipが表示されるまでのdelay(ms)
         },
         stack:false,
-        format:"HH:mm",
+        format:"dd",
         //maxHeight:"500px",
       };
 
