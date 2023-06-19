@@ -90,6 +90,7 @@
   <body>
     <a href="index.html" class="btn_04">地図に戻る</a>
     <div id="visualization"></div>
+    <a href="index.html?area=area1">1</a>
     <script>
       
       for (let i = 0; i < items.length; i++) {
@@ -100,7 +101,8 @@
         var endHour = o.end.getHours().toString().padStart(2, "0");
         var endMinutes = o.end.getMinutes().toString().padStart(2, "0");
         if (o.end) {
-          o.title = `${startHour}:${startMinutes} ～ ${endHour}:${endMinutes}`;
+          o.title = `${startHour}:${startMinutes} ～ ${endHour}:${endMinutes}
+          `;
         }
       }
       const options = {
