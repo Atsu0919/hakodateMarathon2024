@@ -170,11 +170,55 @@
       }
 
       const url = new URL(window.location.href);
-      console.log(url.href); // https://example.com
+      console.log(url.href);
       const area = url.searchParams.get('area');
       console.log(area);
       if(area != null){
-        map.setView([41.775792, 140.772275], 15);
+        switch(area){
+          case "area1-1":
+          map.setView([41.7855,140.7451],15);
+          break;
+          case "area1-2":
+          map.setView([41.7816,140.7544],15);
+          break;
+          case "area2":
+          map.setView([41.7741,140.7606],15);
+          break;
+          case "area3":
+          map.setView([41.7751,140.7864],15);
+          break;
+          case "area4":
+          map.setView([41.7740,140.8054],15);
+          break;
+          case "area5":
+          map.setView([41.7674,140.8195],15);
+          break;
+          case "area6":
+          map.setView([41.7707,140.7419],15);
+          break;
+          case "area7":
+          map.setView([41.7591,140.7236],15);
+          break;
+          case "area8":
+          map.setView([41.7730,140.7407],15);
+          break;
+          case "area9":
+          map.setView([41.7838,140.7308],15);
+          break;
+          case "area10":
+          map.setView([41.7783,140.7243],15);
+          break;
+          case "area11":
+          map.setView([41.7690,140.7118],15);
+          break;
+          case "area12":
+          map.setView([41.7826,140.7402],15);
+          break;
+          default:
+          map.setView([41.785965, 140.745646], 15);
+          break;
+        }
+        
             
       };
 
