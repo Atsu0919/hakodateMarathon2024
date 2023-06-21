@@ -135,6 +135,7 @@
         if (o.end) {
           o.title = `${startHour}:${startMinutes} ～ ${endHour}:${endMinutes}
           `;
+          o.content = `${o.content} ${startHour}:${startMinutes}-${endHour}:${endMinutes}`;
         }
       }
       const options = {
@@ -146,6 +147,8 @@
           delay: 50, // tooltipが表示されるまでのdelay(ms)
         },
         stack:false,
+        showMajorLabels:false,
+        showCurrentTime:true,
         format:"dd",
         //maxHeight:"500px",
       };

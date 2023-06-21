@@ -1,7 +1,7 @@
 const items = [
   {
     group: "1",
-    content: "area1 後半",
+    content: "area1-2",
     className: "area1",
     style: "font-size:10pt;",
     start: new Date(2023, 5, 25, 9, 14, 0),
@@ -17,7 +17,7 @@ const items = [
   },
   {
     group: "1",
-    content: "area8",
+    content: "area8 12:28~13:19",
     className: "area8",
     style: "font-size:10pt;",
     start: new Date(2023, 5, 25, 12, 28, 0),
@@ -33,7 +33,7 @@ const items = [
   },
   {
     group: "2",
-    content: "area1前半",
+    content: "area1-1",
     className: "area1",
     style: "font-size:10pt;",
     start: new Date(2023, 5, 25, 9, 3, 0),

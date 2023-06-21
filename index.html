@@ -60,7 +60,7 @@
     <script src="courseJson.js"></script>
     <script>
       var map = L.map("mapid", { minZoom: 13, maxZoom: 18 });
-      map.setView([41.785965, 140.745646], 15);
+      map.setView([41.785965, 140.745646], 14);
       var osm = L.tileLayer(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
         {
@@ -225,7 +225,7 @@
           map.setView([41.7826,140.7402],15);
           break;
           default:
-          map.setView([41.785965, 140.745646], 15);
+          map.setView([41.785965, 140.745646], 14);
           break;
         }
         
