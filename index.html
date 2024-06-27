@@ -95,6 +95,14 @@
         outlineWidth: 1, // Marker outline width
         iconSize: [31, 42], // Width and height of the icon
       });
+      var AEDIcon = L.IconMaterial.icon({
+        icon: "monitor_heart", // Name of Material icon
+        iconColor: "red", // Material icon color (could be rgba, hex, html name...)
+        markerColor: "rgba(255,255,255,1)", // Marker fill color
+        outlineColor: "red", // Marker outline color
+        outlineWidth: 1, // Marker outline width
+        iconSize: [31, 42], // Width and height of the icon
+      });
       function onEachFeature(feature, layer) {
         var comment = "";
         if (feature.properties && feature.properties.name) {
@@ -134,16 +142,24 @@
         },
         onEachFeature: onEachFeature,
       });
+      var aed_marker = L.geoJSON(aed, {
+        pointToLayer: function (feature, cordinate) {
+          return L.marker(cordinate, { icon: AEDIcon });
+        },
+        onEachFeature: onEachFeature,
+      });
       var firstAidStation = L.layerGroup([FAS]);
       var MBTcourse = L.layerGroup([course_marker]);
       var limitGate = L.layerGroup([gate_marker]);
       var aidStation = L.layerGroup([aid_marker]);
+      var aedStation = L.layerGroup([aed_marker]);
 
       var overlayLayerControls = {
         救護所: firstAidStation,
         コース: MBTcourse,
         関門: limitGate,
         エイド: aidStation,
+        AED: aedStation,
       };
       L.control
         .layers(null, overlayLayerControls, {
