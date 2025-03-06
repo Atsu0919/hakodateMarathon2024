@@ -5,18 +5,7 @@
        }
       },
   "features": [
-    { "type": "Feature",
-      "properties": { "id": 1, "name": "fujisan" },
-      "geometry": {
-         "type": "Point",
-         "coordinates": [138.7309, 35.3628]
- }},
-    { "type": "Feature",
-       "properties": { "id": 2, "name": "ashitakayama" },
-       "geometry": {
-          "type": "Point",
-          "coordinates": [138.8079, 35.1983]
-  }},
+
       {
         "type": "Feature",
         "properties": {
