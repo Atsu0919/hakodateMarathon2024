@@ -16,6 +16,28 @@
        "geometry": {
           "type": "Point",
           "coordinates": [138.8079, 35.1983]
-  }}
+  }},
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "第１救護所",
+          "_markerType": "Icon",
+          "_iconSize": [
+            20,
+            20
+          ],
+          "_iconAnchor": [
+            10,
+            10
+          ]
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            140.772275,
+            41.775792
+          ]
+        }
+      }
   ]
 }
